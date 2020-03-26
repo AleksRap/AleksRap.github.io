@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon.ico">
+  <title>Контакты</title>
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fullpage/css/fullpage.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/lightgallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="modal" id="modal-callback">
+    <div class="modal__window modal__window_500">
+      <button class="modal__btn-close" type="button" data-modal="close"></button>
+      <h5 class="modal__title">Заказать обратный звонок</h5>
+      <div class="modal__body">
+        <form class="feedback-form">
+          <input class="feedback-form__input" type="text" placeholder="Имя">
+          <input class="feedback-form__input" type="text" placeholder="Телефон (обязательно)" id="callback-phone" required>
+          <textarea class="textarea textarea_min-height_120 modal__textarea" placeholder="Сообщение"></textarea>
+          <label class="checkbox modal__checkbox" for="consent">
+            <input class="checkbox__original" id="consent" type="checkbox" checked>
+            <div class="checkbox__fake"></div>
+            <div class="checkbox__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
+          </label>
+          <button class="btn btn_blue" type="button" id="callback-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="contacts container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-5">
+          <div class="wrap-nav">
+            <div class="position-fixed wrap-nav__nav">
+              <nav class="nav d-flex flex-column">
+                <div class="logo nav__logo">
+                  <a class="logo__link d-flex align-items-center" href="index.html">
+                    <img class="logo__pic" src="img/logo.svg" alt="Картинка"><span class="logo__title">Соцсервис</span>
+                  </a>
+                </div>
+                <div class="nav__list d-flex flex-column flex-fill"><a class="nav__item" href="index.html">Главная</a><a class="nav__item" href="about_us.html">О компании</a><a class="nav__item" href="amenities.html">Услуги</a><a class="nav__item" href="asks.html">Вопросы</a><a class="nav__item nav__item_active"
+                  href="contacts.html">Контакты</a>
+                </div>
+                <div class="contact">
+                  <button class="btn btn_blue contact__btn" type="button" data-modal="open">Заказать обратный звонок</button><a class="contact__number" href="tel:88314237003">8 (831) 423-70-03</a><a class="contact__number" href="tel:89200003003">8 (920) 000-30-03</a><span class="contact__text">Диспетчерская служба</span>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="navmob-wrap">
+            <div class="navbar">
+              <div class="navbar-head d-flex justify-content-between align-items-center w-100">
+                <div class="logo">
+                  <a class="logo__link d-flex align-items-center" href="index.html">
+                    <img class="logo__pic" src="img/logo.svg" alt="Картинка">
+                  </a>
+                </div>
+                <div class="contact navbar__contact d-flex flex-column flex-fill"><a class="contact__number" href="tel:88314237003">8 (831) 423-70-03</a><a class="contact__number" href="tel:89200003003">8 (920) 000-30-03</a><span class="contact__text">Диспетчерская служба</span>
+                </div>
+                <div class="btn-wrap d-flex flex-column justify-content-between align-items-center">
+                  <button class="c-hamburger c-hamburger--htx navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                  </button><span class="navbar-toggler-text">меню</span>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <div class="mobil-menu">
+                  <ul class="nav navbar-nav">
+                    <li class="nav-item nav-item"><a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="about_us.html">О компании</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="amenities.html">Услуги</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="asks.html">Вопросы</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                  </ul>
+                  <div class="mobil-menu__btn">
+                    <button class="btn btn_blue contact__btn" type="button" data-modal="open">Заказать обратный звонок</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7 contacts_pt">
+          <article class="max-width-725 d-flex flex-column contacts__description">
+            <h2 class="title-2 contacts__title-2">Контакты</h2>
+            <div class="contacts__map">
+              <div class="map" id="map">
+                <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49525d36b0d12fd87558c24720f5b3cc0023763b8bbea77cb25e194fa5e5b6ed&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+              </div>
+            </div>
+            <div class="contact-info">
+              <div class="contact-info__address">Нижний Новгород, ул. Новая, д. 8</div>
+              <div class="contact-info__time">Круглосуточно</div>
+              <div class="contact-info__phone">8 (831) 423-70-03 <span class='contact-info__slash'>/</span>
+                <br class="contact-info__br">8 929 053 70 03</div><a class="contact-info__email" href="mailto:socservise@outlook.com">socservise@outlook.com</a>
+            </div>
+          </article>
+          <section class="max-width-725">
+            <h3 class="title-3 contacts__title-3">Мы в соц. сетях</h3>
+            <div class="contacts__vk-widget">
+              <div class="vk-widget">
+                <script src="https://vk.com/js/api/openapi.js?162"></script>
+                <div id="vk_groups"></div>
+                <script>
+                  VK.Widgets.Group("vk_groups", {mode: 3, width: "auto", height: "360"}, 151567394);
+                </script>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="footer_bgc container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-7 offset-lg-5">
+        <div class="footer_pt">
+          <footer class="footer">
+            <h2 class="title-2 title-2_w footer__title-2">Напишите нам и мы с вами свяжемся</h2>
+            <form class="feedback-form footer__feedback-form">
+              <input class="feedback-form__input" type="text" placeholder="Имя">
+              <input class="feedback-form__input" type="email" placeholder="Email (обязательно)" required>
+              <textarea class="feedback-form__textarea" placeholder="Ваше сообщение"></textarea>
+              <button class="feedback-form__btn">Отправить</button>
+            </form>
+            <div class="companies footer__companies d-flex flex-wrap">
+              <div class="row">
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://blizkie.org/">
+                    <img class="companies__pic" src="img/company-6.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="http://www.purhma.com/">
+                    <img class="companies__pic" src="img/company-5.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="http://www.sanaviation.ru/ru/">
+                    <img class="companies__pic" src="img/company-1.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://www.dom-doverie.ru/">
+                    <img class="companies__pic" src="img/company-4.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://yantary.ru/">
+                    <img class="companies__pic" src="img/company-3.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://ochagnn.ru/">
+                    <img class="companies__pic" src="img/company-2.png" alt="Картинка">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="libs/jquery/js/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/fullpage/js/scrolloverflow.min.js"></script>
+  <script src="libs/fullpage/js/fullpage.min.js"></script>
+  <script src="libs/lightgallery/js/lightgallery.min.js"></script>
+  <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/svg4everybody/js/svg4everybody.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

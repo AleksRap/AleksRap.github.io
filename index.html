@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon.ico">
+  <title>Главная</title>
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fullpage/css/fullpage.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/lightgallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="modal" id="modal-callback">
+    <div class="modal__window modal__window_500">
+      <button class="modal__btn-close" type="button" data-modal="close"></button>
+      <h5 class="modal__title">Заказать обратный звонок</h5>
+      <div class="modal__body">
+        <form class="feedback-form">
+          <input class="feedback-form__input" type="text" placeholder="Имя">
+          <input class="feedback-form__input" type="text" placeholder="Телефон (обязательно)" id="callback-phone" required>
+          <textarea class="textarea textarea_min-height_120 modal__textarea" placeholder="Сообщение"></textarea>
+          <label class="checkbox modal__checkbox" for="consent">
+            <input class="checkbox__original" id="consent" type="checkbox" checked>
+            <div class="checkbox__fake"></div>
+            <div class="checkbox__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
+          </label>
+          <button class="btn btn_blue" type="button" id="callback-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="row">
+      <div class="col-12 col-lg-5">
+        <div class="wrap-nav">
+          <div class="position-fixed wrap-nav__nav">
+            <nav class="nav d-flex flex-column">
+              <div class="logo nav__logo">
+                <a class="logo__link d-flex align-items-center" href="index.html">
+                  <img class="logo__pic" src="img/logo.svg" alt="Картинка"><span class="logo__title">Соцсервис</span>
+                </a>
+              </div>
+              <div class="nav__list d-flex flex-column flex-fill"><a class="nav__item nav__item_active" href="index.html">Главная</a><a class="nav__item" href="about_us.html">О компании</a><a class="nav__item" href="amenities.html">Услуги</a><a class="nav__item" href="asks.html">Вопросы</a><a class="nav__item"
+                href="contacts.html">Контакты</a>
+              </div>
+              <div class="contact">
+                <button class="btn btn_blue contact__btn" type="button" data-modal="open">Заказать обратный звонок</button><a class="contact__number" href="tel:88314237003">8 (831) 423-70-03</a><a class="contact__number" href="tel:89200003003">8 (920) 000-30-03</a><span class="contact__text">Диспетчерская служба</span>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="navbar">
+          <div class="navbar-head d-flex justify-content-between align-items-center w-100">
+            <div class="logo">
+              <a class="logo__link d-flex align-items-center" href="index.html">
+                <img class="logo__pic" src="img/logo.svg" alt="Картинка">
+              </a>
+            </div>
+            <div class="contact navbar__contact d-flex flex-column flex-fill"><a class="contact__number" href="tel:88314237003">8 (831) 423-70-03</a><a class="contact__number" href="tel:89200003003">8 (920) 000-30-03</a><span class="contact__text">Диспетчерская служба</span>
+            </div>
+            <div class="btn-wrap d-flex flex-column justify-content-between align-items-center">
+              <button class="c-hamburger c-hamburger--htx navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+              </button><span class="navbar-toggler-text">меню</span>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <div class="mobil-menu">
+              <ul class="nav navbar-nav">
+                <li class="nav-item nav-item"><a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item nav-item"><a class="nav-link" href="about_us.html">О компании</a>
+                </li>
+                <li class="nav-item nav-item"><a class="nav-link" href="amenities.html">Услуги</a>
+                </li>
+                <li class="nav-item nav-item"><a class="nav-link" href="asks.html">Вопросы</a>
+                </li>
+                <li class="nav-item nav-item"><a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+              <div class="mobil-menu__btn">
+                <button class="btn btn_blue contact__btn" type="button" data-modal="open">Заказать обратный звонок</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7">
+        <ul class="pagination" id="pagination">
+          <li class="pagination__item" data-menuanchor="firstPage"><a class="pagination__link" href="#firstPage"><span class="pagination__number">01</span><span class="pagination__point"></span></a>
+          </li>
+          <li class="pagination__item" data-menuanchor="secondPage"><a class="pagination__link" href="#secondPage"><span class="pagination__number">02</span><span class="pagination__point"></span></a>
+          </li>
+          <li class="pagination__item" data-menuanchor="thirdPage"><a class="pagination__link" href="#thirdPage"><span class="pagination__number">03</span><span class="pagination__point"></span></a>
+          </li>
+          <li class="pagination__item" data-menuanchor="fourthPage"><a class="pagination__link" href="#fourthPage"><span class="pagination__number">04</span><span class="pagination__point"></span></a>
+          </li>
+          <li class="pagination__item" data-menuanchor="fifthPage"><a class="pagination__link" href="#fifthPage"><span class="pagination__number">05</span><span class="pagination__point"></span></a>
+          </li>
+          <li class="pagination__item" data-menuanchor="lastPage"><a class="pagination__link" href="#lastPage"><span class="pagination__number">06</span><span class="pagination__point"></span></a>
+          </li>
+        </ul>
+        <div id="fullpage">
+          <div class="section">
+            <div class="row h-100">
+              <div class="col h-100 mr-col slide-1_wrap">
+                <div class="slide-1 w-100 h-100" style="background: radial-gradient(140.73% 140.73% at -8.77% 0%, rgba(112, 221, 255, 0.7) 0%, rgba(0, 87, 255, 0.7) 100%), radial-gradient(110.57% 110.57% at -10.57% 0%, rgba(0, 255, 163, 0.7) 0%, rgba(0, 7, 9, 0.7) 100%), url('../img/slide-1-background.jpg') center/cover no-repeat;">
+                  <h1>Служба транспортировки лежачих больных</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="row h-100">
+              <div class="col h-100 ml-col">
+                <div class="slide-2 w-100 h-100 d-flex flex-column justify-content-center">
+                  <section>
+                    <h2 class="title-2 slide-2__title-2">Почему нас выбирают?</h2>
+                    <div class="slide-2__content d-flex flex-wrap">
+                      <div class="card d-flex flex-column slide-2__card slide-2__card_mb slide-2__card_mr">
+                        <div class="card__icon card__icon_time" style="background: url('img/time24.svg') center/contain no-repeat;"></div>
+                        <h3 class="card__title">24/7</h3>
+                        <p class="card__text">Перевозка лежачих больных осуществляется круглосуточно</p>
+                      </div>
+                      <div class="card d-flex flex-column slide-2__card slide-2__card_mb slide-2__card_mr">
+                        <div class="card__icon card__icon_guarantees" style="background: url('img/guarantees.svg') center/contain no-repeat;"></div>
+                        <h3 class="card__title">Гарантия</h3>
+                        <p class="card__text">Мы гарантируем исполнение наших обязательств перед заказчиком</p>
+                      </div>
+                      <div class="card d-flex flex-column slide-2__card slide-2__card_mb slide-2__card_mr">
+                        <div class="card__icon card__icon_timely" style="background: url('img/timely.svg') center/contain no-repeat;"></div>
+                        <h3 class="card__title">Своевременно</h3>
+                        <p class="card__text">Приедем к Вам точно в назначенное время и день</p>
+                      </div>
+                      <div class="card d-flex flex-column slide-2__card slide-2__card_mb slide-2__card_mr">
+                        <div class="card__icon card__icon_qualitatively" style="background: url('img/qualitatively.svg') center/contain no-repeat;"></div>
+                        <h3 class="card__title">Качественно</h3>
+                        <p class="card__text">Мы уделяем большое внимание качеству предоставляемых услуг</p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="row h-100">
+              <div class="col h-100 mr-col">
+                <div class="slide-3 w-100 h-100 d-flex flex-column justify-content-center">
+                  <article class="d-flex flex-column">
+                    <img class="slide-3__pic" src="img/slide-3-background.jpg" alt="Картинка">
+                    <h2 class="title-2 slide-3__title-2">О нас</h2>
+                    <div class="text slide-3__text">
+                      <p>Служба социальных перевозок «СоцСервис» - осуществляет квалифицированную перевозку лежачих больных и людей с ограниченными физическими возможностями по Нижнему Новгороду и Области благодаря ответственному и внимательному персоналу
+                        с большим опытом работы.</p>
+                      <p>Наши сотрудники аккуратно и бережно доставят лежачего больного в автомобиль и к месту назначения.</p>
+                    </div><a class="slide-3__link" href="about_us.html">Узнайте о нас больше</a>
+                  </article>
+                  <section>
+                    <h3 class="title-3 slide-3__title-3">Наш автопарк</h3>
+                    <div class="gallery slide-3__gallery">
+                      <div class="row" id="lightgallery">
+                        <div class="col-6 col-lg-4" data-src="img/img-1.jpg">
+                          <a class="gallery__link" href="img/img-1.jpg">
+                            <img class="gallery__pic" src="img/img-1.jpg" alt="Картинка">
+                          </a>
+                        </div>
+                        <div class="col-6 col-lg-4" data-src="img/img-2.jpg">
+                          <a class="gallery__link" href="img/img-2.jpg">
+                            <img class="gallery__pic" src="img/img-2.jpg" alt="Картинка">
+                          </a>
+                        </div>
+                        <div class="col-6 col-lg-4" data-src="img/img-3.jpg">
+                          <a class="gallery__link" href="img/img-3.jpg">
+                            <img class="gallery__pic" src="img/img-3.jpg" alt="Картинка">
+                          </a>
+                        </div>
+                        <div class="col-6 col-lg-4" data-src="img/img-4.jpg">
+                          <a class="gallery__link" href="img/img-4.jpg">
+                            <img class="gallery__pic" src="img/img-4.jpg" alt="Картинка">
+                          </a>
+                        </div>
+                        <div class="col-6 col-lg-4" data-src="img/img-5.jpg">
+                          <a class="gallery__link" href="img/img-5.jpg">
+                            <img class="gallery__pic" src="img/img-5.jpg" alt="Картинка">
+                          </a>
+                        </div>
+                        <div class="col-6 col-lg-4" data-src="img/img-6.jpg">
+                          <a class="gallery__link" href="img/img-6.jpg">
+                            <img class="gallery__pic" src="img/img-6.jpg" alt="Картинка">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="row h-100">
+              <div class="col h-100 ml-col">
+                <div class="slide-4 w-100 h-100 d-flex flex-column justify-content-center">
+                  <section>
+                    <h2 class="title-2 slide-4__title-2">Акции</h2>
+                    <div class="swiper-container" data-slider-for-desktop>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="box_wrap-1">
+                            <div class="box slide-4__box d-flex">
+                              <div class="box__wrap d-flex flex-column">
+                                <h4 class="box__title">Скидка на транспортировку 10%</h4>
+                                <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                              </div>
+                              <div class="box__img" style="background-image: url(img/box-1.jpg);"></div>
+                            </div>
+                          </div>
+                          <div class="box_wrap-2">
+                            <div class="box slide-4__box d-flex slide-4__box_m">
+                              <div class="box__wrap d-flex flex-column">
+                                <h4 class="box__title">Скидка на транспортировку 10%</h4>
+                                <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                              </div>
+                              <div class="box__img" style="background-image: url(img/box-2.jpg);"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="box_wrap-1">
+                            <div class="box slide-4__box d-flex">
+                              <div class="box__wrap d-flex flex-column">
+                                <h4 class="box__title">Скидка на транспортировку 20%</h4>
+                                <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                              </div>
+                              <div class="box__img" style="background-image: url(img/box-1.jpg);"></div>
+                            </div>
+                          </div>
+                          <div class="box_wrap-2">
+                            <div class="box slide-4__box d-flex slide-4__box_m">
+                              <div class="box__wrap d-flex flex-column">
+                                <h4 class="box__title">Скидка на транспортировку 20%</h4>
+                                <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                              </div>
+                              <div class="box__img" style="background-image: url(img/box-2.jpg);"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="box_wrap-1">
+                            <div class="box slide-4__box d-flex">
+                              <div class="box__wrap d-flex flex-column">
+                                <h4 class="box__title">Скидка на транспортировку 30%</h4>
+                                <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                              </div>
+                              <div class="box__img" style="background-image: url(img/box-1.jpg);"></div>
+                            </div>
+                          </div>
+                          <div class="box_wrap-2">
+                            <div class="box slide-4__box d-flex slide-4__box_m">
+                              <div class="box__wrap d-flex flex-column">
+                                <h4 class="box__title">Скидка на транспортировку 30%</h4>
+                                <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                              </div>
+                              <div class="box__img" style="background-image: url(img/box-2.jpg);"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <nav class="swiper-nav">
+                        <div class="swiper-button-prev">
+                          <div class="swiper-button-arrow"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                          <div class="swiper-button-arrow swiper-button-arrow_right"></div>
+                        </div>
+                      </nav>
+                    </div>
+                    <div class="swiper-container" data-slider-for-mobil>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="box slide-4__box d-flex flex-column">
+                            <div class="box__wrap d-flex flex-column">
+                              <h4 class="box__title">Скидка на транспортировку 10%</h4>
+                              <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                            </div>
+                            <div class="box__img" style="background-image: url(img/box-1.jpg);"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="box slide-4__box d-flex flex-column">
+                            <div class="box__wrap d-flex flex-column">
+                              <h4 class="box__title">Скидка на транспортировку 20%</h4>
+                              <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                            </div>
+                            <div class="box__img" style="background-image: url(img/box-1.jpg);"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="box slide-4__box d-flex flex-column">
+                            <div class="box__wrap d-flex flex-column">
+                              <h4 class="box__title">Скидка на транспортировку 30%</h4>
+                              <p class="box__text">При заказе памперсов на 2000 рублей</p>
+                            </div>
+                            <div class="box__img" style="background-image: url(img/box-1.jpg);"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <nav class="swiper-nav">
+                        <div class="swiper-button-prev">
+                          <div class="swiper-button-arrow"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                          <div class="swiper-button-arrow swiper-button-arrow_right"></div>
+                        </div>
+                      </nav>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="row h-100">
+              <div class="col h-100 ml-col">
+                <div class="slide-5 w-100 h-100 d-flex flex-column justify-content-center">
+                  <section>
+                    <h2 class="title-2 slide-5__title-2">Отзывы</h2>
+                    <div class="swiper-container" data-slider-for-desktop>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="card_wrap-1">
+                            <div class="card slide-5__card d-flex flex-column">
+                              <h3 class="card__title">Ксения 1</h3>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                                ipsum.</p>
+                            </div>
+                          </div>
+                          <div class="card_wrap-2">
+                            <div class="card slide-5__card d-flex flex-column">
+                              <h3 class="card__title">Антонина 1</h3>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                                ipsum.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card_wrap-1">
+                            <div class="card slide-5__card d-flex flex-column">
+                              <h3 class="card__title">Ксения 2</h3>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                                ipsum.</p>
+                            </div>
+                          </div>
+                          <div class="card_wrap-2">
+                            <div class="card slide-5__card d-flex flex-column">
+                              <h3 class="card__title">Антонина 2</h3>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                                ipsum.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card_wrap-1">
+                            <div class="card slide-5__card d-flex flex-column">
+                              <h3 class="card__title">Ксения 3</h3>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                                ipsum.</p>
+                            </div>
+                          </div>
+                          <div class="card_wrap-2">
+                            <div class="card slide-5__card d-flex flex-column">
+                              <h3 class="card__title">Антонина 3</h3>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                                ipsum.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <nav class="swiper-nav">
+                        <div class="swiper-button-prev">
+                          <div class="swiper-button-arrow"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                          <div class="swiper-button-arrow swiper-button-arrow_right"></div>
+                        </div>
+                      </nav>
+                    </div>
+                    <div class="swiper-container" data-slider-for-mobil>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="card slide-5__card d-flex flex-column">
+                            <h3 class="card__title">Ксения 1</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                              ipsum.</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card slide-5__card d-flex flex-column">
+                            <h3 class="card__title">Антонина 1</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                              ipsum.</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card slide-5__card d-flex flex-column">
+                            <h3 class="card__title">Ксения 2</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                              ipsum.</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card slide-5__card d-flex flex-column">
+                            <h3 class="card__title">Антонина 2</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                              ipsum.</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card slide-5__card d-flex flex-column">
+                            <h3 class="card__title">Ксения 3</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                              ipsum.</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card slide-5__card d-flex flex-column">
+                            <h3 class="card__title">Антонина 3</h3>
+                            <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus justo, tincidunt ut purus ullamcorper. Viverra semper risus pulvinar adipiscing aliquam tempus maecenas platea quisque. Est sed pretium sed turpis vulputate
+                              ipsum.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <nav class="swiper-nav">
+                        <div class="swiper-button-prev">
+                          <div class="swiper-button-arrow"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                          <div class="swiper-button-arrow swiper-button-arrow_right"></div>
+                        </div>
+                      </nav>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section slide-6_fix">
+            <div class="row">
+              <div class="col ml-col">
+                <div class="slide-6 d-flex flex-column">
+                  <div class="slide-6_invert">
+                    <div class="footer_pt">
+                      <footer class="footer">
+                        <h2 class="title-2 title-2_w footer__title-2">Напишите нам и мы с вами свяжемся</h2>
+                        <form class="feedback-form footer__feedback-form">
+                          <input class="feedback-form__input" type="text" placeholder="Имя">
+                          <input class="feedback-form__input" type="email" placeholder="Email (обязательно)" required>
+                          <textarea class="feedback-form__textarea" placeholder="Ваше сообщение"></textarea>
+                          <button class="feedback-form__btn">Отправить</button>
+                        </form>
+                        <div class="companies footer__companies d-flex flex-wrap">
+                          <div class="row">
+                            <div class="col-4 d-flex justify-content-center">
+                              <a class="companies__link" href="https://blizkie.org/">
+                                <img class="companies__pic" src="img/company-6.png" alt="Картинка">
+                              </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                              <a class="companies__link" href="http://www.purhma.com/">
+                                <img class="companies__pic" src="img/company-5.png" alt="Картинка">
+                              </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                              <a class="companies__link" href="http://www.sanaviation.ru/ru/">
+                                <img class="companies__pic" src="img/company-1.png" alt="Картинка">
+                              </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                              <a class="companies__link" href="https://www.dom-doverie.ru/">
+                                <img class="companies__pic" src="img/company-4.png" alt="Картинка">
+                              </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                              <a class="companies__link" href="https://yantary.ru/">
+                                <img class="companies__pic" src="img/company-3.png" alt="Картинка">
+                              </a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center">
+                              <a class="companies__link" href="https://ochagnn.ru/">
+                                <img class="companies__pic" src="img/company-2.png" alt="Картинка">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="footer__contact-info">
+                          <div class="contact-info">
+                            <div class="contact-info__address">Нижний Новгород, ул. Новая, д. 8</div>
+                            <div class="contact-info__time">Круглосуточно</div>
+                            <div class="contact-info__phone">8 (831) 423-70-03 <span class='contact-info__slash'>/</span>
+                              <br class="contact-info__br">8 929 053 70 03</div><a class="contact-info__email" href="mailto:socservise@outlook.com">socservise@outlook.com</a>
+                          </div>
+                        </div>
+                      </footer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="libs/fullpage/js/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="libs/fullpage/js/fullpage.min.js"></script>
+  <script src="libs/jquery/js/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/fullpage/js/scrolloverflow.min.js"></script>
+  <script src="libs/fullpage/js/fullpage.min.js"></script>
+  <script src="libs/lightgallery/js/lightgallery.min.js"></script>
+  <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/svg4everybody/js/svg4everybody.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon.ico">
+  <title>Услуги</title>
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fullpage/css/fullpage.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/lightgallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="modal" id="modal-callback">
+    <div class="modal__window modal__window_500">
+      <button class="modal__btn-close" type="button" data-modal="close"></button>
+      <h5 class="modal__title">Заказать обратный звонок</h5>
+      <div class="modal__body">
+        <form class="feedback-form">
+          <input class="feedback-form__input" type="text" placeholder="Имя">
+          <input class="feedback-form__input" type="text" placeholder="Телефон (обязательно)" id="callback-phone" required>
+          <textarea class="textarea textarea_min-height_120 modal__textarea" placeholder="Сообщение"></textarea>
+          <label class="checkbox modal__checkbox" for="consent">
+            <input class="checkbox__original" id="consent" type="checkbox" checked>
+            <div class="checkbox__fake"></div>
+            <div class="checkbox__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
+          </label>
+          <button class="btn btn_blue" type="button" id="callback-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="amenities container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-5">
+          <div class="wrap-nav">
+            <div class="position-fixed wrap-nav__nav">
+              <nav class="nav d-flex flex-column">
+                <div class="logo nav__logo">
+                  <a class="logo__link d-flex align-items-center" href="index.html">
+                    <img class="logo__pic" src="img/logo.svg" alt="Картинка"><span class="logo__title">Соцсервис</span>
+                  </a>
+                </div>
+                <div class="nav__list d-flex flex-column flex-fill"><a class="nav__item" href="index.html">Главная</a><a class="nav__item" href="about_us.html">О компании</a><a class="nav__item nav__item_active" href="amenities.html">Услуги</a><a class="nav__item" href="asks.html">Вопросы</a><a class="nav__item"
+                  href="contacts.html">Контакты</a>
+                </div>
+                <div class="contact">
+                  <button class="btn btn_blue contact__btn" type="button" data-modal="open">Заказать обратный звонок</button><a class="contact__number" href="tel:88314237003">8 (831) 423-70-03</a><a class="contact__number" href="tel:89200003003">8 (920) 000-30-03</a><span class="contact__text">Диспетчерская служба</span>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="navmob-wrap">
+            <div class="navbar">
+              <div class="navbar-head d-flex justify-content-between align-items-center w-100">
+                <div class="logo">
+                  <a class="logo__link d-flex align-items-center" href="index.html">
+                    <img class="logo__pic" src="img/logo.svg" alt="Картинка">
+                  </a>
+                </div>
+                <div class="contact navbar__contact d-flex flex-column flex-fill"><a class="contact__number" href="tel:88314237003">8 (831) 423-70-03</a><a class="contact__number" href="tel:89200003003">8 (920) 000-30-03</a><span class="contact__text">Диспетчерская служба</span>
+                </div>
+                <div class="btn-wrap d-flex flex-column justify-content-between align-items-center">
+                  <button class="c-hamburger c-hamburger--htx navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                  </button><span class="navbar-toggler-text">меню</span>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <div class="mobil-menu">
+                  <ul class="nav navbar-nav">
+                    <li class="nav-item nav-item"><a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="about_us.html">О компании</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="amenities.html">Услуги</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="asks.html">Вопросы</a>
+                    </li>
+                    <li class="nav-item nav-item"><a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                  </ul>
+                  <div class="mobil-menu__btn">
+                    <button class="btn btn_blue contact__btn" type="button" data-modal="open">Заказать обратный звонок</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7 amenities_pt">
+          <article class="d-flex flex-column amenities__description">
+            <h2 class="title-2 amenities__title-2">Услуги</h2>
+            <div class="text wysiwyg-wrap">
+              <p>Наша компания предлагает Вашему вниманию услугу, которая поможет надёжно и своевременно перевезти лежачего больного по Нижнему Новгороду, области, другим регионам России а так же:</p>
+              <ul>
+                <li>Перевозка лежачего больного из больницы - домой, в различные медицинские учреждения, санатории, хоспис, на дачу, на прогулку и пр;</li>
+                <li>Транспортировка больного из одной клиники в другую;</li>
+                <li>Перевозка больного на обследование или консультации, ожидание больного и транспортировка обратно домой, при необходимости сопровождение нашими сотрудниками больного по мед.учреждению;</li>
+                <li>Встреча, проводы больного в аэропорты, на ж/д вокзалы г. Нижний Новгород, области и других регионов РФ.</li>
+                <li>Подъем/спуск больного в автомобиль заказчика</li>
+              </ul>
+            </div>
+          </article>
+          <section class="max-width-725">
+            <h3 class="title-3 amenities__title-3 amenities__title-3_dn">Стоимость услуг</h3>
+            <div class="billet-list">
+              <div class="row">
+                <div class="col-12 col-xl-6">
+                  <div class="billet-list__billet">
+                    <div class="billet billet_height">
+                      <div class="billet__img">
+                        <img src="img/billet-img.jpg" alt="Картинка" />
+                      </div>
+                      <div class="billet__description">
+                        <div class="billet__text">
+                          <p>При перевозке больного задействованы два сотрудника (санитар и водитель-санитар).</p>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <div class="billet__price-wrap d-flex justify-content-between">
+                            <div class="billet__time">8:00 — 21:00</div>
+                            <div class="billet__price">от 1500 руб./ч</div>
+                          </div>
+                          <div class="billet__price-wrap d-flex justify-content-between">
+                            <div class="billet__time">21:00 — 8:00</div>
+                            <div class="billet__price">от 2000 руб./ч</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="billet-list__billet">
+                    <div class="billet billet_p d-flex flex-column justify-content-between">
+                      <h5 class="billet__title">Транспортировка до аэропорта</h5><span class="billet__price align-self-end">от 1200 руб.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                  <div class="billet-list__billet">
+                    <div class="billet billet_p d-flex flex-column justify-content-between">
+                      <h5 class="billet__title">Подъем/спуск больного в автомобиль заказчика</h5><span class="billet__price align-self-end">от 1200 руб.</span>
+                    </div>
+                  </div>
+                  <div class="billet-list__billet">
+                    <div class="billet billet_p d-flex flex-column justify-content-between">
+                      <h5 class="billet__title">Транспортировка до Ж/Д</h5><span class="billet__price align-self-end">от 2000 руб.</span>
+                    </div>
+                  </div>
+                  <div class="billet-list__billet">
+                    <div class="billet billet_p d-flex flex-column justify-content-between">
+                      <h5 class="billet__title">Перевозка по области</h5><span class="billet__price align-self-end">от 1200 руб.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="amenities__including max-width-725">
+            <h3 class="title-3 amenities__title-3_mb">Дополнительно</h3>
+            <div class="text wysiwyg-wrap">
+              <p>В цену входит 5 этажей подъема или спуска (каждый дополнительный этаж оплачивается по 150 рублей) при весе пациента до 90 кг. При весе свыше 90 кг осуществляется доплата в размере 300 рублей.</p>
+              <p>Время начала перевозки исчисляется с момента прибытия бригады к пациенту. Первый час оплачивается в полном объеме далее тарификация производится каждые 15 минут.</p>
+              <p>Стоимость услуг указана при заказе автомобиля по предварительной заявке не позднее, чем за сутки.</p>
+              <p>Платный участок дороги на маршруте следования, стоянку на ж/д вокзале и в аэропорту оплачивает Клиент.</p>
+              <p>Время подачи автомобиля зависит от дорожных событий и может составлять плюс/минус 15-20 минут от назначенного времени.</p>
+              <p>В случае форс-мажорных обстоятельств и накладок по маршруту Компания оставляет за собой право подать Клиенту резервный автомобиль.</p>
+            </div>
+          </section>
+          <section>
+            <h3 class="title-3 amenities__title-3">Так же вы можете у нас приобрести</h3>
+            <div class="product-wrap">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-1.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Инвалидное кресло</h6>
+                      </div>
+                      <div class="product__price">6 200 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-2.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Подгузники (памперсы) для взрослых Dailee Care Super 30 шт</h6>
+                      </div>
+                      <div class="product__description">Размер/обхват — талии S(1)/55-80 см, уровень впитываемости — 6 кап.</div>
+                      <div class="product__price">1 050 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-2.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Памперсы DAILEE CARE L</h6>
+                      </div>
+                      <div class="product__description">Размер/обхват — талии S(1)/55-80 см, уровень впитываемости — 6 кап.</div>
+                      <div class="product__price">1 050 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-2.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Памперсы DAILEE CARE L</h6>
+                      </div>
+                      <div class="product__description">Размер/обхват — талии S(1)/55-80 см, уровень впитываемости — 6 кап.</div>
+                      <div class="product__price">1 050 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-1.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Инвалидное кресло</h6>
+                      </div>
+                      <div class="product__price">6 200 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-2.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Памперсы DAILEE CARE L</h6>
+                      </div>
+                      <div class="product__description">Размер/обхват — талии S(1)/55-80 см, уровень впитываемости — 6 кап.</div>
+                      <div class="product__price">1 050 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-2.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Памперсы DAILEE CARE L</h6>
+                      </div>
+                      <div class="product__description">Размер/обхват — талии S(1)/55-80 см, уровень впитываемости — 6 кап.</div>
+                      <div class="product__price">1 050 руб.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="product product_pb">
+                    <div class="product__img">
+                      <img src="img/product-2.jpg" alt="Картинка" />
+                    </div>
+                    <div class="product__wrap">
+                      <div class="product__title">
+                        <h6>Памперсы DAILEE CARE L</h6>
+                      </div>
+                      <div class="product__description">Размер/обхват — талии S(1)/55-80 см, уровень впитываемости — 6 кап.</div>
+                      <div class="product__price">1 050 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="footer_bgc container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-7 offset-lg-5">
+        <div class="footer_pt">
+          <footer class="footer">
+            <h2 class="title-2 title-2_w footer__title-2">Напишите нам и мы с вами свяжемся</h2>
+            <form class="feedback-form footer__feedback-form">
+              <input class="feedback-form__input" type="text" placeholder="Имя">
+              <input class="feedback-form__input" type="email" placeholder="Email (обязательно)" required>
+              <textarea class="feedback-form__textarea" placeholder="Ваше сообщение"></textarea>
+              <button class="feedback-form__btn">Отправить</button>
+            </form>
+            <div class="companies footer__companies d-flex flex-wrap">
+              <div class="row">
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://blizkie.org/">
+                    <img class="companies__pic" src="img/company-6.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="http://www.purhma.com/">
+                    <img class="companies__pic" src="img/company-5.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="http://www.sanaviation.ru/ru/">
+                    <img class="companies__pic" src="img/company-1.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://www.dom-doverie.ru/">
+                    <img class="companies__pic" src="img/company-4.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://yantary.ru/">
+                    <img class="companies__pic" src="img/company-3.png" alt="Картинка">
+                  </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <a class="companies__link" href="https://ochagnn.ru/">
+                    <img class="companies__pic" src="img/company-2.png" alt="Картинка">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__contact-info">
+              <div class="contact-info">
+                <div class="contact-info__address">Нижний Новгород, ул. Новая, д. 8</div>
+                <div class="contact-info__time">Круглосуточно</div>
+                <div class="contact-info__phone">8 (831) 423-70-03 <span class='contact-info__slash'>/</span>
+                  <br class="contact-info__br">8 929 053 70 03</div><a class="contact-info__email" href="mailto:socservise@outlook.com">socservise@outlook.com</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="libs/jquery/js/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/fullpage/js/scrolloverflow.min.js"></script>
+  <script src="libs/fullpage/js/fullpage.min.js"></script>
+  <script src="libs/lightgallery/js/lightgallery.min.js"></script>
+  <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/svg4everybody/js/svg4everybody.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

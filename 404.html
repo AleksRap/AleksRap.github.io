@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon.ico">
+  <title>404</title>
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fullpage/css/fullpage.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/lightgallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="modal" id="modal-callback">
+    <div class="modal__window modal__window_500">
+      <button class="modal__btn-close" type="button" data-modal="close"></button>
+      <h5 class="modal__title">Заказать обратный звонок</h5>
+      <div class="modal__body">
+        <form class="feedback-form">
+          <input class="feedback-form__input" type="text" placeholder="Имя">
+          <input class="feedback-form__input" type="text" placeholder="Телефон (обязательно)" id="callback-phone" required>
+          <textarea class="textarea textarea_min-height_120 modal__textarea" placeholder="Сообщение"></textarea>
+          <label class="checkbox modal__checkbox" for="consent">
+            <input class="checkbox__original" id="consent" type="checkbox" checked>
+            <div class="checkbox__fake"></div>
+            <div class="checkbox__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
+          </label>
+          <button class="btn btn_blue" type="button" id="callback-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="error-page">
+    <div class="error-page__content">
+      <div class="logo error-page__logo">
+        <a class="logo__link d-flex align-items-center" href="index.html">
+          <img class="logo__pic" src="img/logo.svg" alt="Картинка"><span class="logo__title">Соцсервис</span>
+        </a>
+      </div>
+      <div class="error-page__img">
+        <img src="img/404.png">
+      </div>
+      <h2 class="error-page__subtitle">Страница не найдена. <br> Что то пошло не так!</h2><a class="error-page__btn" href="index.html">Вернутся назад</a>
+    </div>
+  </div>
+  <script src="libs/jquery/js/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/fullpage/js/scrolloverflow.min.js"></script>
+  <script src="libs/fullpage/js/fullpage.min.js"></script>
+  <script src="libs/lightgallery/js/lightgallery.min.js"></script>
+  <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/svg4everybody/js/svg4everybody.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
