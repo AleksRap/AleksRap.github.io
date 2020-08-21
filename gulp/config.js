@@ -36,9 +36,9 @@ module.exports = {
 
   watch: {
     pug:            'src/templates/**/*.pug',
-    html:           'public/*.html',
+    html:           'docs/*.html',
     styles:         'src/styles/**/*.scss',
-    css:            'public/css/style.css',
+    css:            'docs/css/style.css',
     stylesLibs:     'src/styles/libs.css',
     scripts:        ['src/js/**/*.js', '!src/js/libs.js'],
     scriptsLibs:    'src/js/libs.js',
@@ -52,15 +52,15 @@ module.exports = {
   },
 
   dist: {
-    dist:           'public/',
-    styles:         'public/css/',
-    scripts:        'public/js/',
-    fonts:          'public/fonts/',
-    img:            'public/images/',
-    svg:            'public/svg/',
-    html:           'public/**/*.html',
-    docs:           'public/docs/',
-    videos:         'public/videos/'
+    dist:           'docs/',
+    styles:         'docs/css/',
+    scripts:        'docs/js/',
+    fonts:          'docs/fonts/',
+    img:            'docs/images/',
+    svg:            'docs/svg/',
+    html:           'docs/**/*.html',
+    docs:           'docs/docs/',
+    videos:         'docs/videos/'
   }
 
 };
