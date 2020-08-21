@@ -24,9 +24,10 @@ const docs        = require('./gulp/tasks/docs');
 const videos      = require('./gulp/tasks/videos');
 const clean       = require('./gulp/tasks/clean');
 const server      = require('./gulp/tasks/server');
+const transferProjects = require('./gulp/tasks/transfer-projects');
 
 
-const dev         = parallel(series(templates, replaceUrl), styles, stylesLibs, js, jsLibs, fonts, fontsTFF, img, svg, sprite, docs, videos);
+const dev         = parallel(series(templates, replaceUrl), styles, stylesLibs, js, jsLibs, fonts, fontsTFF, img, svg, sprite, docs, videos, transferProjects);
 const build       = series(clean, dev);
 
 if (env === 'dev') module.exports.default = series(build, server);

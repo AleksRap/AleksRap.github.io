@@ -15,6 +15,7 @@ module.exports = {
     spriteStyles:   'src/styles/sprite',
     docs:           'src/docs',
     videos:         'src/videos',
+    projects:       'src/projects'
   },
 
   app: {
@@ -31,7 +32,8 @@ module.exports = {
     sprite:         'src/svg/sprite/*',
     spriteStyles:   'src/styles/sprite/',
     docs:           'src/docs/**/*',
-    videos:         'src/videos/**/*'
+    videos:         'src/videos/**/*',
+    projects:       'src/projects/**/*'
   },
 
   watch: {
@@ -48,7 +50,8 @@ module.exports = {
     svg:            ['src/svg/**/*.svg', '!src/svg/sprite/**/*.svg'],
     sprite:         'src/svg/sprite/**/*.svg',
     docs:           'src/docs/**/*',
-    videos:         'src/videos/**/*'
+    videos:         'src/videos/**/*',
+    projects:       'src/projects/**/*'
   },
 
   dist: {
@@ -60,7 +63,8 @@ module.exports = {
     svg:            'docs/svg/',
     html:           'docs/**/*.html',
     docs:           'docs/docs/',
-    videos:         'docs/videos/'
+    videos:         'docs/videos/',
+    projects:       'docs/projects/'
   }
 
 };

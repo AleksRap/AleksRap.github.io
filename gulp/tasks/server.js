@@ -21,6 +21,7 @@ const svg         = require('./svg');
 const sprite      = require('./sprite');
 const docs        = require('./docs');
 const videos      = require('./videos');
+const transferProjects = require('./transfer-projects');
 
 
 module.exports = function server(done) {
@@ -53,6 +54,7 @@ module.exports = function server(done) {
   watch(config.watch.sprite, series(sprite)).on('change', browserSync.reload);                                // Следим за именениями в папке sprite
   watch(config.watch.docs, series(docs)).on('change', browserSync.reload);                                    // Следим за именениями в папке docs
   watch(config.watch.videos, series(videos)).on('change', browserSync.reload);                                // Следим за именениями в папке videos
+  watch(config.watch.projects, series(transferProjects)).on('change', browserSync.reload);                                // Следим за именениями в папке videos
 
   return done();                                                                                              // Оповещаем об окончании выполнения
 };

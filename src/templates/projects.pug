@@ -1,0 +1,30 @@
+extends layout/layout
+
+block var
+  - var title = 'Портфолио';
+
+block header
+  include layout/header
+
+block content
+  main.projects.content
+    include components/sa
+    a.projects__to-main(href='/') На главную
+    ul.projects__list
+
+      -
+        projects = [
+          {name: 'Геромедицина', description: 'многостраничный сайт', type: 'demo', url: 'projects/geromedicine/index.html'},
+          {name: 'Glorax', description: 'интерактивный лендингактивный лендингактивный лендингактивный лендингактивный лендингактивный лендинг', type: 'demo', url: 'projects/glorax/index.html'}
+        ]
+
+      each project in projects
+        li.projects__item
+          a.projects__link(href=project.url)
+            span.projects__name=project.name
+            span.projects__separator -
+            span.projects__type (!{project.type})
+            span.projects__description=project.description
+
+block footer
+  include layout/footer

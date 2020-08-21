@@ -1,21 +1,5 @@
 .main {
 
-  &__sa {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-
-    font-size: rem(25);
-    font-weight: 300;
-    color: $second-color;
-    letter-spacing: -0.05em;
-
-    @media (min-width: 768px) {
-      top: 30px;
-      right: 50px;
-    }
-  }
-
   &__subtitle {
     margin: 0;
 

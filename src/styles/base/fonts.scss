@@ -15,6 +15,20 @@
 @font-face {
   font-family: 'WorkSans';
   font-style: normal;
+  font-weight: 500;
+  src: local('WorkSans-Medium'), url('../fonts/WorkSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('WorkSans-SemiBold'), url('../fonts/WorkSans-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
   font-weight: 700;
   src: local('WorkSans-Bold'), url('../fonts/WorkSans-Bold.woff') format('woff');
 }
