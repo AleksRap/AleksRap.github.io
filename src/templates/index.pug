@@ -1,0 +1,24 @@
+extends layout/layout
+
+block var
+  - var title = 'Портфолио';
+
+block header
+  include layout/header
+
+block content
+  main.main.content
+    span.main__sa SA
+    h2.main__subtitle Sedov Aleksei
+    h1.main__title Front-end developer
+    p.main__text
+      | Hi, I'm Aleksei Sedov.
+      span.main__age(data-age) 25
+      | year old front-end developer based in Nizhny Novgorod, Russia.
+
+    .main__links
+      a.link-btn(href='https://github.com/AleksRap/RESUME' target='_blank') to my resume
+      a.link-btn(href='/projects') to my projects
+
+block footer
+  include layout/footer
