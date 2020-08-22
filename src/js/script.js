@@ -15,9 +15,11 @@ window.onload = () => {
   const preloader = document.querySelector('[data-preloader]');
   const content = document.querySelector('[data-content]');
 
-  const timeDelay = 1000;
+  /** Минимальная задержка, чтоб прелоадер не моргал */
+  const timeDelay = 500;
+
   const endTime = new Date().getTime();
-  const remains = timeDelay - endTime + startTime;
+  const remains = timeDelay - (endTime - startTime);
 
   const timeout = remains < 0 ? 0 : remains;
 
