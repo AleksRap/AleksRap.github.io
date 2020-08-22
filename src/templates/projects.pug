@@ -14,26 +14,36 @@ block content
 
       -
         projects = [
-          {name: 'Геромедицина', description: 'многостраничный сайт', type: 'demo', url: 'projects/geromedicine/index.html'},
-          {name: 'Glorax', description: 'интерактивный лендинг', type: 'demo', url: 'projects/glorax/index.html'},
-          {name: 'Weather', description: 'погодное приложение', type: 'demo', url: ''},
-          {name: 'Game Guess Password', description: 'консольная игра на угадывание задуманного компьютером числа', type: 'repository', url: 'https://github.com/AleksRap/game-guess-password'},
-          {name: 'My Gulp config', description: 'мой конфиг для gulp', type: 'repository', url: 'https://github.com/AleksRap/my-gulp'},
-          {name: 'My Webpack config + ESLint', description: 'мой конфиг для webpack + eslint', type: 'repository', url: 'https://github.com/AleksRap/my-webpack'},
-          {name: 'My libs', description: 'написанные мной библиотеки и плагины', type: 'repository', url: 'https://github.com/AleksRap/my-libs'},
-          {name: 'Examples code', description: 'примеры кода из различных проектов', type: 'repository', url: 'https://github.com/AleksRap/examples-code'},
-          {name: 'React Quiz', description: 'создание квизов, авторизация, возможность сохранять свои квизы', type: 'demo', url: 'https://react-quiz-e6514.firebaseapp.com/'},
-          {name: 'React Github', description: 'взаимодействие с api github', type: 'repository', url: 'https://github.com/AleksRap/react-github'},
-          {name: 'Get Questions', description: 'приложение для получения списка вопросов', type: 'demo', url: 'https://podcast-app-aleksrap.firebaseapp.com/'},
+          {name: 'Геромедицина', description: 'многостраничный сайт', urlDemo: 'projects/geromedicine/index.html', urlRepository: 'https://github.com/AleksRap/geromedicine'},
+          {name: 'Glorax', description: 'интерактивный лендинг', urlDemo: 'projects/glorax/index.html', urlRepository: 'https://github.com/AleksRap/glorax'},
+          // {name: 'Weather', description: 'погодное приложение', urlDemo: '', urlRepository: 'https://github.com/AleksRap/weather'},
+          {name: 'Game Guess Password', description: 'консольная игра на угадывание задуманного компьютером числа', urlRepository: 'https://github.com/AleksRap/game-guess-password'},
+          {name: 'My Gulp config', description: 'мой конфиг для gulp', urlRepository: 'https://github.com/AleksRap/my-gulp'},
+          {name: 'My Webpack config + ESLint', description: 'мой конфиг для webpack + eslint', urlRepository: 'https://github.com/AleksRap/my-webpack'},
+          {name: 'My libs', description: 'написанные мной библиотеки и плагины', urlRepository: 'https://github.com/AleksRap/my-libs'},
+          {name: 'Examples code', description: 'примеры кода из различных проектов', urlRepository: 'https://github.com/AleksRap/examples-code'},
+          {name: 'React Quiz', description: 'создание квизов, авторизация, возможность сохранять свои квизы', urlDemo: 'https://react-quiz-e6514.firebaseapp.com/', urlRepository: 'https://github.com/AleksRap/react-quiz'},
+          {name: 'React Github', description: 'взаимодействие с api github', urlDemo: 'https://github.com/AleksRap/react-github', urlRepository: 'https://github.com/AleksRap/react-github'},
+          {name: 'Get Questions', description: 'приложение для получения списка вопросов', urlDemo: 'https://podcast-app-aleksrap.firebaseapp.com/', urlRepository: 'https://github.com/AleksRap/get-questions'},
         ]
 
       each project in projects
         li.projects__item
-          a.projects__link(href=project.url)
+          .projects__info
             span.projects__name=project.name
             span.projects__separator -
-            span.projects__type (!{project.type})
             span.projects__description=project.description
+          if (project.urlDemo || project.urlRepository)
+            .projects__links
+              | [
+              if (project.urlDemo)
+                a.projects__link(href=project.urlDemo target='_blank') demo
+              if (project.urlDemo && project.urlRepository)
+                span.projects__separator |
+              if (project.urlRepository)
+                a.projects__link(href=project.urlRepository target='_blank') repository
+              | ]
+
 
 block footer
   include layout/footer
