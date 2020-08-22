@@ -17,6 +17,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
+  font-display: swap;
+
   &::before {
 
     @media (min-width: 1024px) {
