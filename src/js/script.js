@@ -15,7 +15,7 @@ window.onload = () => {
   const preloader = document.querySelector('[data-preloader]');
   const content = document.querySelector('[data-content]');
 
-  const timeDelay = 500;
+  const timeDelay = 1000;
   const endTime = new Date().getTime();
   const remains = timeDelay - endTime + startTime;
 
