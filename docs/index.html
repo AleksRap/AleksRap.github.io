@@ -13,15 +13,30 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
-    <header class="header"></header>
-    <main class="main content"><span class="sa">SA</span>
-      <h2 class="main__subtitle">Sedov Aleksei</h2>
-      <h1 class="main__title">Front-end developer</h1>
-      <p class="main__text">Hi, I'm Aleksei Sedov.<span class="main__age" data-age>25</span>year old front-end developer based in Nizhny Novgorod, Russia.</p>
-      <div class="main__links"><a class="link-btn" href="https://github.com/AleksRap/RESUME" target="_blank">to my resume</a><a class="link-btn" href="projects.html">to my projects</a></div>
-    </main>
-    <footer class="footer"></footer>
-    <script src="js/libs.min.js" defer></script>
-    <script src="js/script.min.js" defer></script>
+    <div class="preloader" data-preloader>
+      <div class="preloader__box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="base hide" data-content>
+      <header class="header"></header>
+      <main class="main content"><span class="sa">SA</span>
+        <h2 class="main__subtitle">Sedov Aleksei</h2>
+        <h1 class="main__title">Front-end developer</h1>
+        <p class="main__text">Hi, I'm Aleksei Sedov.<span class="main__age" data-age>25</span>year old front-end developer based in Nizhny Novgorod, Russia.</p>
+        <div class="main__links"><a class="link-btn" href="https://github.com/AleksRap/RESUME" target="_blank">to my resume</a><a class="link-btn" href="projects.html">to my projects</a></div>
+      </main>
+      <footer class="footer"></footer>
+      <script src="js/libs.min.js" async></script>
+      <script src="js/script.min.js" async></script>
+    </div>
   </body>
 </html>

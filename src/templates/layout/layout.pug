@@ -4,7 +4,9 @@ html(lang='ru')
   head
     include ../global/head
   body
-    block header
-    block content
-    block footer
-    include ../global/scripts
+    include ../components/preloader
+    .base.hide(data-content)
+      block header
+      block content
+      block footer
+      include ../global/scripts

@@ -8,11 +8,15 @@
 
     padding-right: 15px;
 
-    font-size: rem(16);
+    font-size: rem(24);
     text-decoration: none;
     color: $first-color;
 
     border-right: 1px solid $second-color;
+
+    @media (min-width: 768px) {
+      font-size: rem(16);
+    }
   }
 
   &__list {
