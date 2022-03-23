@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ee5d8f5f.css",
+    "main.js": "./static/js/main.6654f673.js",
+    "static/js/787.a380bd3d.chunk.js": "./static/js/787.a380bd3d.chunk.js",
+    "static/media/background.jpg": "./static/media/background.0a512d3a320224e4e6cf.jpg",
+    "static/media/Roboto-Medium.ttf": "./static/media/Roboto-Medium.13a29228654d5c5ec9c4.ttf",
+    "static/media/Roboto-Thin.ttf": "./static/media/Roboto-Thin.c38fab23fc1c36894f10.ttf",
+    "static/media/Roboto-Regular.ttf": "./static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
+    "static/media/Roboto-Black.ttf": "./static/media/Roboto-Black.1224b64c95f897e542d9.ttf",
+    "static/media/Roboto-Bold.ttf": "./static/media/Roboto-Bold.4f39c5796e60c9d8e732.ttf",
+    "static/media/Roboto-Light.ttf": "./static/media/Roboto-Light.0cea39826bd36bbfe330.ttf",
+    "static/media/fontello.eot?16489768": "./static/media/fontello.3cd001362dcae07d40e1.eot",
+    "static/media/fontello.ttf?16489768": "./static/media/fontello.66f6ea3ffa45450e1c41.ttf",
+    "static/media/fontello.woff?16489768": "./static/media/fontello.c13205cde2765013a8b4.woff",
+    "static/media/fontello.woff2?16489768": "./static/media/fontello.6b72951f25a928fe8eb2.woff2",
+    "static/media/fontello.svg?16489768": "./static/media/fontello.6d3afe7ab7dad9113fef.svg",
+    "index.html": "./index.html",
+    "main.ee5d8f5f.css.map": "./static/css/main.ee5d8f5f.css.map",
+    "main.6654f673.js.map": "./static/js/main.6654f673.js.map",
+    "787.a380bd3d.chunk.js.map": "./static/js/787.a380bd3d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee5d8f5f.css",
+    "static/js/main.6654f673.js"
+  ]
+}
