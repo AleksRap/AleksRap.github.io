@@ -1,0 +1,17 @@
+extends layout/layout
+
+block var
+  - var title = 'Рекоммендации';
+
+block header
+  include layout/header
+
+block content
+  main.recommendations.content
+    include components/sa
+    include components/nav
+    img.recommendations__img(src="./images/recommendations.jpg")
+
+
+block footer
+  include layout/footer

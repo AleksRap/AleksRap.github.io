@@ -14,12 +14,12 @@
 
   transition: all .2s ease-in;
 
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     width: 400px;
   }
 
   &:hover {
-    background-color: $second-color;
+    background-color: $first-color;
     color: white;
     border-color: transparent;
     transition: all .2s ease-in;
@@ -32,10 +32,17 @@
     }
   }
 
-  &_projects {
+  &_hh {
 
     &:hover {
-      background-color: $first-color;
+      background-color: $second-color;
+    }
+  }
+
+  &_linkedin {
+
+    &:hover {
+      background-color: $four-color;
     }
   }
 }

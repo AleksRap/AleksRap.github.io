@@ -28,27 +28,33 @@
   }
 
   &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
-    @media (min-width: 768px) {
-      display: flex;
-    }
+    gap: rem(30);
 
-    & > * {
-      margin-bottom: rem(30);
-
-      @media (min-width: 768px) {
-        margin-right: rem(50);
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+    @media (min-width: 960px) {
+      flex-direction: row;
+      gap: rem(50);
     }
   }
 
-  &__linksResume {
+  &__linksBlock {
     display: flex;
     flex-direction: column;
     gap: rem(30);
+  }
+
+  &__separate {
+    height: 1px;
+    background-color: $first-color;
+    opacity: .2;
+    flex: 0 0 auto;
+
+    @media (min-width: 960px) {
+      width: 1px;
+      height: initial;
+    }
   }
 }
