@@ -10,8 +10,6 @@ const {
   pug,
   debug
 } 	                  = require('gulp-load-plugins')();
-const htmlValidator   = require ('gulp-w3c-html-validator');
-const gulpIf          = require('gulp-if');
 const through2        = require('through2');
 const emitty          = require('@emitty/core').configure();
 const languagePug     = require('@emitty/language-pug').parse;
@@ -57,7 +55,6 @@ module.exports = function templates(done) {
           })
         }))                                                                       // При ошибках компиляции не останавливаем процесс слежения, выводим ошибку
         .pipe(pug({pretty: true}))                                                // Компилируем, запрещая минифицировать HTML
-        .pipe(htmlValidator())                                                    // W3C html валидатор
         .pipe(dest(config.dist.dist))                                             // Выгружаем в папку public
     }
   });

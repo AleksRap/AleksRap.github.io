@@ -9,7 +9,6 @@ const {
   notify,
   pug
 } 	                = require('gulp-load-plugins')();
-const htmlValidator = require ('gulp-w3c-html-validator');
 
 
 module.exports = function templates() {
@@ -22,6 +21,5 @@ module.exports = function templates() {
       })
     }))                                   // При ошибках компиляции не останавливаем процесс слежения, выводим ошибку
     .pipe(pug({pretty: true}))            // Компилируем, запрещая минифицировать HTML
-    .pipe(htmlValidator())                // W3C html валидатор
     .pipe(dest(config.dist.dist));        // Выгружаем в папку public
 };
