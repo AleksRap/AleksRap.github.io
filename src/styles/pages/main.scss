@@ -45,4 +45,10 @@
       }
     }
   }
+
+  &__linksResume {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+  }
 }

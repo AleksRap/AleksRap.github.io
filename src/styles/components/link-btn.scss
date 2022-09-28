@@ -15,7 +15,7 @@
   transition: all .2s ease-in;
 
   @media (min-width: 768px) {
-    width: 250px;
+    width: 400px;
   }
 
   &:hover {
@@ -23,5 +23,19 @@
     color: white;
     border-color: transparent;
     transition: all .2s ease-in;
+  }
+
+  &_github {
+
+    &:hover {
+      background-color: $third-color;
+    }
+  }
+
+  &_projects {
+
+    &:hover {
+      background-color: $first-color;
+    }
   }
 }
